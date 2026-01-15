@@ -1,6 +1,8 @@
 /* Experience Section */
 .experience {
   padding: 80px 20px;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
 
 .timeline {
@@ -16,6 +18,7 @@
   width: 2px;
   height: 100%;
   background-color: var(--border-color);
+  transition: background-color 0.3s ease;
 }
 
 .timeline-item {
@@ -41,25 +44,22 @@
   height: 16px;
   border-radius: 50%;
   background-color: var(--primary-color);
-  border: 3px solid white;
+  border: 3px solid var(--bg-primary);
   box-shadow: 0 0 0 3px var(--border-color);
   top: 1.5rem;
   z-index: 1;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline-content {
-      background: linear-gradient(
-    135deg,
-    #F8FAFC 0%,
-    #EEF2FF 100%
-  );
+  background-color: var(--card-bg);
   padding: 1.5rem;
   border-radius: 8px;
   transition: var(--transition);
 }
 
 .timeline-content:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px var(--shadow-color-hover);
   transform: translateY(-4px);
 }
 
@@ -110,7 +110,7 @@
   }
 
   .timeline-content {
-    background-color: white;
+    background-color: var(--card-bg);
     border-left: 3px solid var(--primary-color);
   }
 }

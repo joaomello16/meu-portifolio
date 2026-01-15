@@ -12,7 +12,7 @@ export function Experience() {
   const jobs: Job[] = [
     {
       company: 'Mosaic AI Agency',
-      position: 'Desenvolvedor de Software (Estágio)',
+      position: 'Desenvolvedor de Software',
       period: 'Jul 2025 – Jan 2026',
       location: 'Florianópolis, SC · Híbrido',
       description:
