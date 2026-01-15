@@ -14,9 +14,9 @@ export function Experience() {
       company: 'Mosaic AI Agency',
       position: 'Desenvolvedor de Software',
       period: 'Jul 2025 – Jan 2026',
-      location: 'Florianópolis, SC · Híbrido',
+      location: '',
       description:
-        'Atuação no desenvolvimento de soluções web, participando de todo o ciclo de implementação de sistemas. Criação e manutenção de aplicações front-end e back-end, integração e consumo de APIs, elaboração e otimização de consultas em bancos de dados relacionais e apoio à integração de soluções com inteligência artificial. Trabalho em conjunto com times multidisciplinares, seguindo boas práticas de desenvolvimento e versionamento de código.',
+        'Atuação no desenvolvimento de soluções web, criação e manutenção de aplicações front e back-end, integração e consumo de APIs, elaboração e otimização de consultas em bancos de dados relacionais e apoio à integração de soluções com IA. Trabalho em times multidisciplinares, seguindo boas práticas de desenvolvimento.',
     },
     {
       company: 'Arcos Dorados',

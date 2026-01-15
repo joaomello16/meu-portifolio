@@ -8,13 +8,13 @@ export function About() {
         <div className="about-content">
           <div className="about-text">
             <p>
-              Sou estudante de Engenharia de Software pela Descomplica Faculdade Digital
+              Estudante de Engenharia de Software pela Descomplica Faculdade
               e desenvolvedor de software com experiência prática no desenvolvimento de
               aplicações web.
             </p>
             <p>
-              Atuei na Mosaic AI Agency no desenvolvimento de soluções front-end e back-end,
-              participando de todo o ciclo de implementação de sistemas, com foco na criação
+              Atuei no desenvolvimento de soluções front e back-end,
+               na criação
               e manutenção de aplicações web, integração e consumo de APIs, consultas e
               otimização de bancos de dados relacionais, além do apoio à integração de
               soluções com inteligência artificial.

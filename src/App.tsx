@@ -30,7 +30,7 @@ function App() {
         <About />
         <Experience />
         <Projects />
-      <Footer />
+        <Footer />
       </main>
     </>
   )
