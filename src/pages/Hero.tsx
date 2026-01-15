@@ -9,7 +9,7 @@ export function Hero({ onNavigate }: HeroProps) {
     <section className="hero">
       <div className="container">
         <div className="hero-content">
-          <h1>Meu Portifólio</h1>
+          <h1>Software Engineer</h1>
           <p className="subtitle">
             Desenvolvedor de software com experiencia pratica no desenvolvimento de aplicações web.
           </p>
