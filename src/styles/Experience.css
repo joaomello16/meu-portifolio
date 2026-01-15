@@ -48,7 +48,11 @@
 }
 
 .timeline-content {
-  background-color: var(--light-color);
+      background: linear-gradient(
+    135deg,
+    #F8FAFC 0%,
+    #EEF2FF 100%
+  );
   padding: 1.5rem;
   border-radius: 8px;
   transition: var(--transition);

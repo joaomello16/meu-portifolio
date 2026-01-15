@@ -1,7 +1,11 @@
 /* About Section */
 .about {
   padding: 80px 20px;
-  background-color: var(--light-color);
+    background: linear-gradient(
+    135deg,
+    #F8FAFC 0%,
+    #EEF2FF 100%
+  );
 }
 
 .about-content {

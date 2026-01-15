@@ -1,6 +1,8 @@
 import { ProjectCard } from '../components/ProjectCard'
 import '../styles/Projects.css'
-
+import batmanproject from '../assets/projects/batman-project.png'
+import listadetarefas from '../assets/projects/listadetarefas.png'
+import sitepsicologa from '../assets/projects/sitepsicologa.png'
 interface Project {
   id: number
   title: string
@@ -8,32 +10,37 @@ interface Project {
   technologies: string[]
   githubLink?: string
   siteLink?: string
+  image?: string
 }
 
 export function Projects() {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Portfólio Pessoal',
-      description: 'Site de portfólio minimalista construído com React, TypeScript e Vite.',
-      technologies: ['React', 'TypeScript', 'Vite', 'CSS3'],
-      githubLink: 'https://github.com/seu-usuario/portfolio',
-      siteLink: 'https://seu-portfolio.com',
+      title: 'Batman Ticket Sales ',
+      description: 'Site de venda de ingressos para o filme do Batman com recursos contato, fotos, e avaliações',
+      technologies: ['JS', 'CSS', 'HTML', ],
+      image: batmanproject,
+      githubLink: 'https://github.com/joaomello16/batman-film',
+      siteLink: 'https://batman-ticket.vercel.app/',
     },
     {
       id: 2,
-      title: 'Aplicação de Tarefas',
-      description: 'App de gerenciamento de tarefas com recursos de filtro e persistência de dados.',
-      technologies: ['React', 'TypeScript', 'LocalStorage'],
-      githubLink: 'https://github.com/seu-usuario/todo-app',
-      siteLink: 'https://seu-todo-app.com',
+      title: 'Lista de Tarefas',
+      description: 'Site de gerenciamento de tarefas com recursos de adicionar, editar e excluir tarefas.',
+      technologies: ['JS', 'HTML', 'LocalStorage'],
+      image: listadetarefas,
+      githubLink: 'https://github.com/joaomello16/lista-de-tarefas',
+      siteLink: 'https://listade-tarefas-eliti.netlify.app/',
     },
     {
       id: 3,
-      title: 'Dashboard Analytics',
-      description: 'Dashboard interativo para visualizar dados com gráficos e estatísticas em tempo real.',
-      technologies: ['React', 'TypeScript', 'CSS Grid'],
-      githubLink: 'https://github.com/seu-usuario/dashboard',
+      title: 'Landinng Page Psicóloga',
+      description: 'Site de apresentação para uma psicóloga com informações sobre serviços, especialização e contato.',
+      image: sitepsicologa,
+      technologies: ['React', 'TypeScript', 'lovable'],
+      githubLink: 'https://github.com/joaomello16/lista-de-tarefas',
+      siteLink: 'https://brunabenetti-psicologa-floripa.lovable.app/',
     },
   ]
 
@@ -48,6 +55,7 @@ export function Projects() {
               title={project.title}
               description={project.description}
               technologies={project.technologies}
+              image={project.image}
               githubLink={project.githubLink}
               siteLink={project.siteLink}
             />
