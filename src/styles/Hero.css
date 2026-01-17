@@ -1,4 +1,8 @@
+
 /* Hero Section */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
 .hero {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -12,14 +16,30 @@
 }
 
 [data-theme="dark"] .hero {
-  background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 100%);
+  background: linear-gradient(135deg, #0f0f0f, #0e0e0e, #2f462d);
 }
 
 .hero-content h1 {
   font-size: 3.5rem;
-  color: white;
   margin-bottom: 1rem;
   animation: fadeInUp 0.8s ease;
+  color: rgb(255, 255, 255);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+[data-theme="dark"] .hero-content h1{
+    font-size: 3.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.8s ease;
+
+  font-family: 'JetBrains Mono', monospace;
+  color: #d0fdd0;
+
+  text-shadow:
+    0 0 3px #00ff00,
+    0 0 7px #00ff00,
+    0 0 12px rgb(0, 255, 0);
+  font-family: 'Share Tech Mono', monospace;
 }
 
 .hero-content .subtitle {
@@ -27,6 +47,12 @@
   margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.9);
   animation: fadeInUp 0.8s ease 0.2s both;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-theme="dark"] .hero-content .subtitle{
+  color: #00ff00;
+  font-family: 'Share Tech Mono', monospace;
 }
 
 .hero-buttons {
@@ -43,8 +69,19 @@
 }
 
 .hero .btn-primary {
-  background-color: white;
-  color: #667eea;
+ background-color: white;
+ color: #2563eb;
+}
+
+[data-theme="dark"] .hero .btn-primary{
+background: linear-gradient(135deg, #0f0f0f, #080808, #28382a);
+ color: #00ff00;
+ font-family: 'Share Tech Mono', monospace;
+ border: 2px solid #00ff00;
+}
+
+[data-theme="dark"] .hero .btn-primary:hover {
+  box-shadow: 0 4px 12px rgba(96, 250, 96, 0.3);
 }
 
 .hero .btn-primary:hover {
@@ -57,9 +94,20 @@
   color: white;
 }
 
+[data-theme="dark"] .hero .btn-secondary{
+  font-family: 'Share Tech Mono', monospace;
+  background: linear-gradient(135deg, #0f0f0f, #080808, #28382a);
+}
+
 .hero .btn-secondary:hover {
   background-color: white;
   color: #667eea;
+}
+
+[data-theme="dark"] .hero .btn-secondary:hover{
+  border-color: white;
+  color: white;
+  background-color: black;
 }
 
 @keyframes fadeInUp {

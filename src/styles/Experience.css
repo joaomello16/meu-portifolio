@@ -43,12 +43,15 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: var(--primary-color);
+  border-color: var(--bg-primary);
   border: 3px solid var(--bg-primary);
   box-shadow: 0 0 0 3px var(--border-color);
   top: 1.5rem;
   z-index: 1;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+[data-theme="dark"] .timeline-marker {
+ background-color: #8fff8f;
 }
 
 .timeline-content {
@@ -57,15 +60,27 @@
   border-radius: 8px;
   transition: var(--transition);
 }
+[data-theme="dark"] .timeline-content {
+  background: linear-gradient(135deg, #0f0f0f, #080808, #15221875);
+  box-shadow: 0 4px 12px var(--shadow-color-hover);
+  
+}
 
 .timeline-content:hover {
-  box-shadow: 0 4px 12px var(--shadow-color-hover);
+  box-shadow: 0 2px 6px rgba(123, 255, 0, 0.192);
   transform: translateY(-4px);
 }
 
 .timeline-content h3 {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+}
+[data-theme="dark"] .timeline-content h3 {
+  text-shadow:
+  0 0 2px #00ff0094,
+  0 0 4px #00ff008a,
+  0 0 8px rgba(0, 255, 0, 0.473);
+  color:aliceblue
 }
 
 .timeline-content .company {

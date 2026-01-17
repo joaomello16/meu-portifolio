@@ -1,10 +1,12 @@
 import '../styles/About.css'
+import { useLabels } from '../hooks/useLabels'
 
 export function About() {
+   const { translation, theme } = useLabels()
   return (
     <section id="about" className="about">
       <div className="container">
-        <h2>Sobre Mim</h2>
+        <h2>{translation.about.title[theme]}</h2>
         <div className="about-content">
           <div className="about-text">
             <p>

@@ -35,7 +35,7 @@ export function Projects() {
     },
     {
       id: 3,
-      title: 'Landinng Page Psicóloga',
+      title: 'Landing Page Psicóloga',
       description: 'Site de apresentação para uma psicóloga com informações sobre serviços, especialização e contato.',
       image: sitepsicologa,
       technologies: ['React', 'TypeScript', 'lovable'],

@@ -1,4 +1,6 @@
 /* Header */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 .header {
   background-color: var(--header-bg);
   border-bottom: 1px solid var(--header-border);
@@ -9,6 +11,7 @@
   transition: background-color 0.3s ease, border-color 0.3s ease;
   width: 100%;
 }
+
 
 .header .container {
   display: flex;
@@ -26,8 +29,13 @@
 
 .logo h1 {
   font-size: 1.5rem;
-  color: var(--primary-color);
   margin: 0;
+}
+
+[data-theme="dark"] .logo h1{
+  color: white;
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: none;
 }
 
 .nav {
@@ -47,11 +55,26 @@
   transition: var(--transition);
   padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+[data-theme="dark"] .nav-link{
+  font-family: 'Share Tech Mono', monospace;
+  color: #e6e6e6
 }
 
 .nav-link:hover {
   color: var(--primary-color);
   border-bottom-color: var(--primary-color);
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: #00ff00;
+   border-bottom-color: #00ff00;
+     text-shadow:
+    0 0 2px #00ff00,
+    0 0 4px #00ff00,
+    0 0 8px rgba(0, 255, 0, 0.8);
 }
 
 /* Theme Toggle Button */

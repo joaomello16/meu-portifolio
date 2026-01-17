@@ -21,20 +21,21 @@
 
 /* Variáveis CSS - Dark Mode */
 [data-theme="dark"] {
-  --primary-color: #60a5fa;
+  --primary-color: #8fff8f;
   --secondary-color: #94a3b8;
-  --dark-color: #f1f5f9;
+  --dark-color: #d0fdd0;
   --light-color: #1e293b;
   --border-color: #334155;
-  --text-color: #e2e8f0;
+  --text-color: #e6e6e6;
   --success-color: #34d399;
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
+  --bg-primary: #10141a;
+  --bg-secondary: #14171c;
   --shadow-color: rgba(0, 0, 0, 0.3);
   --shadow-color-hover: rgba(0, 0, 0, 0.5);
-  --header-bg: #1e293b;
-  --header-border: #334155;
-  --card-bg: #1e293b;
+  --header-bg: #121417;
+  --header-border: rgba(124, 255, 0, 0.15);
+  --card-bg: #1a1e24;
+  --font-family: 'Share Tech Mono', monospace;
 }
 
 /* Reset */
@@ -122,7 +123,14 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   color: var(--dark-color);
   line-height: 1.2;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; 
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2 {
+    text-shadow:
+    0 0 2px #00ff0075,
+    0 0 4px #00ff0062,
+    0 0 8px rgba(0, 255, 0, 0.363);
 }
 
 h2 {

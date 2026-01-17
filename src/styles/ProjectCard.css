@@ -11,6 +11,11 @@
   overflow: hidden;
 }
 
+[data-theme="dark"] .project-card {
+  background: linear-gradient(135deg, #0f0f0f, #080808, #15221875);
+  box-shadow: 0 2px 8px rgba(123, 255, 0, 0.192);
+}
+
 .project-card:hover {
   box-shadow: 0 8px 24px var(--shadow-color-hover);
   transform: translateY(-8px);
@@ -55,6 +60,11 @@
   font-weight: 600;
 }
 
+[data-theme="dark"] .project-title {
+  color: #eaffea;
+  text-shadow: 0 0 6px rgba(123, 255, 0, 0.45);
+}
+
 .project-description {
   color: var(--text-color);
   margin-bottom: 1.5rem;
@@ -89,15 +99,15 @@
 }
 
 [data-theme="dark"] .tech-badge {
-  background-color: #1e293b;
-  color: #64b5f6;
-  border: 1px solid #334155;
+  background-color: #121c14;
+  color: #b7e8b7;
+  border: 1px solid rgba(123, 255, 0, 0.2);
 }
 
 [data-theme="dark"] .tech-badge:hover {
-  background-color: #293548;
-  color: #90caf9;
-  border-color: #475569;
+  background-color: #18271c;
+  color: #d6ffd6;
+  border-color: rgba(123, 255, 0, 0.35);
 }
 
 /* Project Links */
@@ -130,14 +140,16 @@
 }
 
 [data-theme="dark"] .project-links .btn-primary {
-  background-color: #3b82f6;
-  color: white;
+background: linear-gradient(135deg, #0f0f0f, #080808, #161f17);
+ color: #00ff00;
+ font-family: 'Share Tech Mono', monospace;
+ border: 2px solid #00ff00;
 }
 
 [data-theme="dark"] .project-links .btn-primary:hover {
-  background-color: #2563eb;
+  background-color: rgba(150, 255, 80, 0.9);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 14px rgba(123, 255, 0, 0.35);
 }
 
 /* Secondary Button (GitHub) */
@@ -150,6 +162,7 @@
   transition: var(--transition);
 }
 
+
 .project-links .btn-secondary:hover {
   background-color: var(--light-color);
   border-color: var(--primary-color);
@@ -159,16 +172,19 @@
 
 [data-theme="dark"] .project-links .btn-secondary {
   background-color: transparent;
-  color: #64b5f6;
-  border: 1.5px solid #334155;
+  color: #ffffff;
+  border: 2px solid rgb(255, 255, 255);
+  background: linear-gradient(135deg, #0f0f0f, #080808, #15221875);
 }
 
 [data-theme="dark"] .project-links .btn-secondary:hover {
-  background-color: #1e3a8a;
-  border-color: #64b5f6;
-  color: #90caf9;
+  background-color: rgba(123, 255, 0, 0.06);
+  border-color: rgba(123, 255, 0, 0.45);
+  color: #eaffea;
   transform: translateY(-2px);
 }
+
+
 
 /* Mobile */
 @media (max-width: 768px) {

@@ -8,7 +8,7 @@
 }
 
 [data-theme="dark"] .footer {
-  background-color: #0f172a;
+  background-color: var(--bg-primary);
   color: #f1f5f9;
 }
 

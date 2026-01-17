@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTheme } from '../context/ThemeContext'
+import { useLabels } from '../hooks/useLabels'
 import '../styles/Header.css'
 
 interface HeaderProps {
@@ -7,12 +8,17 @@ interface HeaderProps {
 }
 
 export function Header({ onNavigate }: HeaderProps) {
-  const { theme, toggleTheme } = useTheme()
+  const { theme, toggleTheme, toggleLanguage } = useTheme()
+  const { translation } = useLabels()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const handleNavClick = (section: string) => {
     onNavigate(section)
     setMobileMenuOpen(false)
+  }
+
+  const getThemeIcon = () => {
+    return theme === 'light' ? '</>' : '⚙️'
   }
 
   return (
@@ -24,23 +30,36 @@ export function Header({ onNavigate }: HeaderProps) {
         <div className="header-actions">
           <nav className={`nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <button onClick={() => handleNavClick('home')} className="nav-link">
-              Início
+              {translation.header.home}
             </button>
             <button onClick={() => handleNavClick('about')} className="nav-link">
-              Sobre
+              {translation.header.about}
             </button>
             <button onClick={() => handleNavClick('experience')} className="nav-link">
-              Experiência
+              {translation.header.experience}
             </button>
             <button onClick={() => handleNavClick('projects')} className="nav-link">
-              Projetos
+              {translation.header.projects}
             </button>
             <button onClick={() => handleNavClick('contact')} className="nav-link">
-              Contato
+              {translation.header.contact}
             </button>
           </nav>
-          <button onClick={toggleTheme} className="theme-toggle" title={`Mudar para modo ${theme === 'light' ? 'escuro' : 'claro'}`}>
-            {theme === 'light' ? '🌙' : '☀️'}
+          <button
+            onClick={toggleLanguage}
+            className="language-toggle"
+            title="Alternar idioma"
+            aria-label="Language toggle"
+          >
+            {translation.header.languageToggle}
+          </button>
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle"
+            title={translation.header.themeToggleTitle(theme)}
+            aria-label="Theme toggle"
+          >
+            {getThemeIcon()}
           </button>
           <button 
             className={`hamburger ${mobileMenuOpen ? 'active' : ''}`}
