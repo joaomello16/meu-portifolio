@@ -1,8 +1,10 @@
 import { ProjectCard } from '../components/ProjectCard'
 import '../styles/Projects.css'
+import { useLabels } from '../hooks/useLabels'
 import batmanproject from '../assets/projects/batman-project.png'
 import listadetarefas from '../assets/projects/listadetarefas.png'
 import sitepsicologa from '../assets/projects/sitepsicologa.png'
+
 interface Project {
   id: number
   title: string
@@ -14,40 +16,24 @@ interface Project {
 }
 
 export function Projects() {
-  const projects: Project[] = [
-    {
-      id: 1,
-      title: 'Batman Ticket Sales ',
-      description: 'Site de venda de ingressos para o filme do Batman com recursos contato, fotos, e avaliações',
-      technologies: ['JS', 'CSS', 'HTML', ],
-      image: batmanproject,
-      githubLink: 'https://github.com/joaomello16/batman-film',
-      siteLink: 'https://batman-ticket.vercel.app/',
-    },
-    {
-      id: 2,
-      title: 'Lista de Tarefas',
-      description: 'Site de gerenciamento de tarefas com recursos de adicionar, editar e excluir tarefas.',
-      technologies: ['JS', 'HTML', 'LocalStorage'],
-      image: listadetarefas,
-      githubLink: 'https://github.com/joaomello16/lista-de-tarefas',
-      siteLink: 'https://listade-tarefas-eliti.netlify.app/',
-    },
-    {
-      id: 3,
-      title: 'Landing Page Psicóloga',
-      description: 'Site de apresentação para uma psicóloga com informações sobre serviços, especialização e contato.',
-      image: sitepsicologa,
-      technologies: ['React', 'TypeScript', 'lovable'],
-      githubLink: 'https://github.com/joaomello16/lista-de-tarefas',
-      siteLink: 'https://brunabenetti-psicologa-floripa.lovable.app/',
-    },
-  ]
+  const { translation } = useLabels()
+
+  const projectImages = [batmanproject, listadetarefas, sitepsicologa]
+
+  const projects: Project[] = translation.projects.items.map((item, index) => ({
+    id: index + 1,
+    title: item.title,
+    description: item.description,
+    technologies: item.technologies,
+    githubLink: item.githubLink,
+    siteLink: item.siteLink,
+    image: projectImages[index],
+  }))
 
   return (
     <section id="projects" className="projects">
       <div className="container">
-        <h2>Projetos</h2>
+        <h2>{translation.projects.title}</h2>
         <div className="projects-grid">
           {projects.map((project) => (
             <ProjectCard

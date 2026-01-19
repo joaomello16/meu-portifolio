@@ -6,7 +6,7 @@ interface HeroProps {
 }
 
 export function Hero({ onNavigate }: HeroProps) {
-  const { translation, theme } = useLabels()
+  const { translation } = useLabels()
 
   return (
     <section className="hero">
@@ -14,20 +14,20 @@ export function Hero({ onNavigate }: HeroProps) {
         <div className="hero-content">
           <h1>João Mello</h1>
           <p className="subtitle">
-            Desenvolvedor de software com experiência prática no desenvolvimento de aplicações web, com foco em backend.
+            {translation.hero.subtitle}
           </p>
           <div className="hero-buttons">
             <button
               onClick={() => onNavigate('about')}
               className="btn btn-primary"
             >
-              {translation.hero.learnMore[theme]}
+              {translation.hero.learnMore['light']}
             </button>
             <button
               onClick={() => onNavigate('projects')}
               className="btn btn-secondary"
             >
-              {translation.hero.myProjects[theme]}
+              {translation.hero.myProjects['light']}
             </button>
           </div>
         </div>

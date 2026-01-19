@@ -3,6 +3,7 @@ export type ThemeValue = 'light' | 'dark'
 
 export interface LanguageTexts {
   hero: {
+    subtitle: string
     learnMore: Record<ThemeValue, string>
     myProjects: Record<ThemeValue, string>
   }
@@ -14,6 +15,26 @@ export interface LanguageTexts {
     contact: string
     languageToggle: string
     themeToggleTitle: (theme: ThemeValue) => string
+  }
+  experience: {
+    title: string
+    jobs: Array<{
+      company: string
+      position: string
+      period: string
+      description: string
+      location?: string
+    }>
+  }
+  projects: {
+    title: string
+    items: Array<{
+      title: string
+      description: string
+      technologies: string[]
+      githubLink?: string
+      siteLink?: string
+    }>
   }
   about: {
     title: Record<ThemeValue, string>
