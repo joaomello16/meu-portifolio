@@ -76,7 +76,7 @@ export const enUS: Language = {
     items: [
       {
         title: 'Batman Ticket Sales',
-        description: 'Ticket sales site for the Batman movie with contact, photos, and reviews features',
+        description: 'Ticket sales site for the Batman movie with contact, photos, and reviews features.',
         technologies: ['JS', 'CSS', 'HTML'],
         githubLink: 'https://github.com/joaomello16/batman-film',
         siteLink: 'https://batman-ticket.vercel.app/'

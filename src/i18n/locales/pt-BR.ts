@@ -76,7 +76,7 @@ export const ptBR: Language = {
     items: [
       {
         title: 'Batman Ticket Sales',
-        description: 'Site de venda de ingressos para o filme do Batman com recursos contato, fotos, e avaliações',
+        description: 'Site de venda de ingressos para o filme do Batman com recursos contato, fotos, e avaliações.',
         technologies: ['JS', 'CSS', 'HTML'],
         githubLink: 'https://github.com/joaomello16/batman-film',
         siteLink: 'https://batman-ticket.vercel.app/'

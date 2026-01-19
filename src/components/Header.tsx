@@ -2,13 +2,16 @@ import { useState } from 'react'
 import { useTheme } from '../context/ThemeContext'
 import { useLabels } from '../hooks/useLabels'
 import '../styles/Header.css'
+import laptopDark from '../assets/button/backend-laptop.png'
+import laptopLight from '../assets/button/frontend-laptop-real.png'
+import ReactCountryFlag from "react-country-flag";
 
 interface HeaderProps {
   onNavigate: (section: string) => void
 }
 
 export function Header({ onNavigate }: HeaderProps) {
-  const { theme, toggleTheme, toggleLanguage } = useTheme()
+  const { theme, toggleTheme, toggleLanguage, language } = useTheme()
   const { translation } = useLabels()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -17,9 +20,7 @@ export function Header({ onNavigate }: HeaderProps) {
     setMobileMenuOpen(false)
   }
 
-  const getThemeIcon = () => {
-    return theme === 'light' ? '</>' : '⚙️'
-  }
+
 
   return (
     <header className="header">
@@ -48,10 +49,14 @@ export function Header({ onNavigate }: HeaderProps) {
           <button
             onClick={toggleLanguage}
             className="language-toggle"
-            title="Alternar idioma"
-            aria-label="Language toggle"
+            title={language === 'pt-BR' ? 'Switch to English' : 'Mudar para Português'}
+            aria-label={language === 'pt-BR' ? 'Switch to English' : 'Mudar para Português'}
           >
-            {translation.header.languageToggle}
+            <ReactCountryFlag
+              svg
+              countryCode={language === 'pt-BR' ? 'US' : 'BR'}
+              className="flag-svg"
+            />
           </button>
           <button
             onClick={toggleTheme}
@@ -59,9 +64,13 @@ export function Header({ onNavigate }: HeaderProps) {
             title={translation.header.themeToggleTitle(theme)}
             aria-label="Theme toggle"
           >
-            {getThemeIcon()}
+            <img
+              src={theme === 'light' ? laptopDark : laptopLight}
+              alt="Theme illustration"
+              className="theme-icon"
+            />
           </button>
-          <button 
+          <button
             className={`hamburger ${mobileMenuOpen ? 'active' : ''}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Menu de navegação"
