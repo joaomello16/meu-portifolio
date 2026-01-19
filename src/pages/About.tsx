@@ -1,35 +1,35 @@
 import '../styles/About.css'
 import { useLabels } from '../hooks/useLabels'
+import { parsePlaceholders } from '../utils/parsePlaceholders'
 
 export function About() {
-   const { translation, theme } = useLabels()
+  const { translation, theme } = useLabels()
+
+  const description1Content = parsePlaceholders(
+    translation.about.description1,
+    translation.about.placeholders
+  )
+
+  const description2Content = parsePlaceholders(
+    translation.about.description2,
+    translation.about.placeholders
+  )
+
   return (
     <section id="about" className="about">
       <div className="container">
         <h2>{translation.about.title[theme]}</h2>
         <div className="about-content">
           <div className="about-text">
-            <p>
-              Estudante de Engenharia de Software pela Descomplica Faculdade
-              e desenvolvedor de software com experiência prática no desenvolvimento de
-              aplicações web.
-            </p>
-            <p>
-              Atuei no desenvolvimento de soluções front e back-end,
-               na criação
-              e manutenção de aplicações web, integração e consumo de APIs, consultas e
-              otimização de bancos de dados relacionais, além do apoio à integração de
-              soluções com inteligência artificial.
-            </p>
+            <p>{description1Content}</p>
+            <p>{description2Content}</p>
           </div>
           <div className="skills">
-            <h3>Habilidades</h3>
+            <h3>{translation.about.skillsTitle}</h3>
             <ul className="skills-list">
-              <li>React / TypeScript</li>
-              <li>Tailwind / Bootstrap</li>
-              <li>Integração e consumo de APIs</li>
-              <li>Consultas em bancos de dados relacionais</li>
-              <li>Git / GitHub</li>
+              {translation.about.skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
             </ul>
           </div>
         </div>

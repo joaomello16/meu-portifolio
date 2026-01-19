@@ -37,6 +37,17 @@
   color: var(--dark-color);
 }
 
+.highlight {
+  color: purple;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .highlight {
+  /* color: #00ff00; */
+  color: #d0fdd0;
+  text-shadow: 0 0 6px rgba(123, 255, 0, 0.452);
+}
+
 .skills-list {
   list-style: none;
 }

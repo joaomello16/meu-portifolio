@@ -15,9 +15,21 @@ export interface LanguageTexts {
     languageToggle: string
     themeToggleTitle: (theme: ThemeValue) => string
   }
-    about: {
-      title: Record<ThemeValue, string>
+  about: {
+    title: Record<ThemeValue, string>
+    description1: string
+    description2: string
+    skillsTitle: string
+    placeholders: {
+      degree: string
+      experience: string
+      frontend: string
+      backend: string
+      apis: string
+      database: string
     }
+    skills: string[]
+  }
 }
 
 export interface Language extends LanguageTexts {}

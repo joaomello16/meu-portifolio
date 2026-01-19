@@ -36,9 +36,9 @@
   color: #d0fdd0;
 
   text-shadow:
-    0 0 3px #00ff00,
-    0 0 7px #00ff00,
-    0 0 12px rgb(0, 255, 0);
+    0 0 2px #00ff00a9,
+    0 0 6px #00ff00a8,
+    0 0 12px rgba(0, 255, 0, 0.658);
   font-family: 'Share Tech Mono', monospace;
 }
 

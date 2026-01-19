@@ -26,7 +26,7 @@ function App() {
     <>
       <Header onNavigate={handleNavigate} />
       <main>
-        {activeSection === 'home' && <Hero onNavigate={handleNavigate} />}
+        <Hero onNavigate={handleNavigate} />
         <About />
         <Experience />
         <Projects />
