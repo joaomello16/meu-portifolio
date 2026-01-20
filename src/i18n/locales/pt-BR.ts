@@ -42,7 +42,7 @@ export const ptBR: Language = {
       'Tailwind / Bootstrap',
       'Integração e consumo de APIs',
       'Consultas em bancos de dados relacionais',
-      'Git / GitHub'
+      'Node.js'
     ]
   },
   experience: {

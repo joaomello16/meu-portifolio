@@ -42,7 +42,7 @@ export const enUS: Language = {
       'Tailwind / Bootstrap',
       'API integration and consumption',
       'Relational database queries',
-      'Git / GitHub'
+      'Node.js'
     ]
   },
   experience: {
